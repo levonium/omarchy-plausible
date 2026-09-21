@@ -1,0 +1,4 @@
+[
+  { "domain": "example.com", "label": "Example" },
+  { "domain": "blog.example.com", "label": "Blog" }
+]

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "levonium.plausible",
+  "name": "Plausible",
+  "version": "1.0.0",
+  "author": "levonium",
+  "license": "MIT",
+  "description": "Plausible Analytics stats per site: realtime visitors, today's visitors, organic and AI assistant traffic, and pageviews",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "Panel.qml"
+  },
+  "barWidget": {
+    "displayName": "Plausible",
+    "description": "Plausible Analytics stats for your sites",
+    "category": "Network",
+    "allowMultiple": false,
+    "defaultSection": "right"
+  }
+}

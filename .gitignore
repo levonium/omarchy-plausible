@@ -1,0 +1,5 @@
+# Your API key and site list are personal and never committed.
+secret.conf
+sites.json
+__pycache__/
+*.pyc
