@@ -199,6 +199,7 @@ Panel {
     property int todayVisitors: -1
     property int todayPageviews: -1
     property int organicVisitors: -1
+    property int referralVisitors: -1
     property int aiVisitors: -1
 
     spacing: Style.space(6)
@@ -263,8 +264,10 @@ Panel {
         waitForEnd: true
         onStreamFinished: {
           var organic = Model.parseChannelVisitors(text, "Organic Search")
+          var referral = Model.parseChannelVisitors(text, "Referral")
           var ai = Model.parseChannelVisitors(text, "AI Assistants")
           if (organic !== null) section.organicVisitors = organic
+          if (referral !== null) section.referralVisitors = referral
           if (ai !== null) section.aiVisitors = ai
         }
       }
@@ -332,8 +335,8 @@ Panel {
       }
       StatTile {
         width: row1.tileWidth
-        title: "ORGANIC"
-        value: section.organicVisitors < 0 ? "—" : Model.formatNumber(section.organicVisitors)
+        title: "PAGEVIEWS"
+        value: section.todayPageviews < 0 ? "—" : Model.formatNumber(section.todayPageviews)
       }
     }
 
@@ -344,13 +347,18 @@ Panel {
 
       StatTile {
         width: row1.tileWidth
-        title: "AI ASSISTANT"
-        value: section.aiVisitors < 0 ? "—" : Model.formatNumber(section.aiVisitors)
+        title: "ORGANIC"
+        value: section.organicVisitors < 0 ? "—" : Model.formatNumber(section.organicVisitors)
       }
       StatTile {
         width: row1.tileWidth
-        title: "PAGEVIEWS"
-        value: section.todayPageviews < 0 ? "—" : Model.formatNumber(section.todayPageviews)
+        title: "REFERRAL"
+        value: section.referralVisitors < 0 ? "—" : Model.formatNumber(section.referralVisitors)
+      }
+      StatTile {
+        width: row1.tileWidth
+        title: "AI ASSISTANT"
+        value: section.aiVisitors < 0 ? "—" : Model.formatNumber(section.aiVisitors)
       }
     }
   }

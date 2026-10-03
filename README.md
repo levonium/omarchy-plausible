@@ -11,6 +11,7 @@ For each site you configure:
 - **Realtime** visitors (right now)
 - **Today's** visitors and pageviews
 - **Today's** organic search visitors
+- **Today's** referral visitors (links from other websites)
 - **Today's** AI assistant visitors (ChatGPT, Perplexity and similar channels
   as classified by Plausible)
 

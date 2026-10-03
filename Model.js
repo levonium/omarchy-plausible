@@ -24,7 +24,7 @@ function parseTotals(raw) {
 
 // Parses a /api/v2/query response broken down by `visit:channel`, and
 // picks out the visitor count for one named channel (e.g. "Organic Search",
-// "AI Assistants"). Absent channel = zero visitors that day, not an error.
+// "Referral", "AI Assistants"). Absent channel = zero visitors that day, not an error.
 function parseChannelVisitors(raw, channelName) {
   try {
     var parsed = JSON.parse(raw)
